@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --background : rgb(11, 0, 51);
+  --background-primary : rgba(132, 0, 255, 0.356);
+  --background-secondary : rgba(9, 0, 48, 0.418);
+}
+
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(11, 0, 51);
+  background-color: var(--background);
 }
 *{
   margin: 0;
