@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SquareBookmarkComponent } from './components/square-bookmark/square-bookmark.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SquareBookmarkComponent
   ],
   imports: [
     BrowserModule,
