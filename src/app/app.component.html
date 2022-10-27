@@ -1,7 +1,20 @@
 <div class="app">
   <div class="bookmarks" >
-    <app-square-bookmark class="child-bookmark" *ngFor="let bookmark of bookmarks" [bookmark]="bookmark" ></app-square-bookmark>
+    <app-square-bookmark class="child-bookmark" *ngFor="let bookmark of bookmarks" [bookmark]="bookmark" (contextmenu)="onRightClick($event, bookmark)" ></app-square-bookmark>
     <app-addbookmark class="child-bookmark" (addBookmarkEvent)="openDialog()" ></app-addbookmark>
   </div>
 
 </div>
+
+<div style="visibility: hidden; position: fixed;" 
+[style.left]="menuTopLeftPosition.x" 
+[style.top]="menuTopLeftPosition.y" 
+[matMenuTriggerFor]="rightMenu"></div> 
+ 
+<!-- standard material menu --> 
+<mat-menu #rightMenu="matMenu"> 
+  <ng-template matMenuContent let-item="item"> 
+    <button mat-menu-item (click)="deleteBookmark(item)">Delete {{item.title}}</button> 
+    <button mat-menu-item>Edit {{item.title}}</button> 
+  </ng-template> 
+</mat-menu>
