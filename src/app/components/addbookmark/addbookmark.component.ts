@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Bookmark } from 'src/app/types/bookmark';
 
 @Component({
   selector: 'app-addbookmark',
   templateUrl: './addbookmark.component.html',
   styleUrls: ['./addbookmark.component.scss']
 })
-export class AddbookmarkComponent implements OnInit {
+export class AddbookmarkComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Output()
+  public addBookmarkEvent = new EventEmitter();
+  
 
   addBookmark(){
-    
+    this.addBookmarkEvent.emit();
   }
 
 }

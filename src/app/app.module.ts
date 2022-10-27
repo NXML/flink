@@ -7,18 +7,29 @@ import { SquareBookmarkComponent } from './components/square-bookmark/square-boo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AddbookmarkComponent } from './components/addbookmark/addbookmark.component';
-
+import { AddBookmarkFormComponent } from './components/add-bookmark-form/add-bookmark-form.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatButtonModule} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     SquareBookmarkComponent,
-    AddbookmarkComponent
+    AddbookmarkComponent,
+    AddBookmarkFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    MatDialogModule,
+    MatInputModule,
+    MatChipsModule,
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

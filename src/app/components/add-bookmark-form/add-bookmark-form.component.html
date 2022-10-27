@@ -1,0 +1,36 @@
+<div class="add-bookmark-form">
+    <form #heroForm="ngForm">
+        <mat-form-field  appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Google" value="" name="title" ngModel required="true">
+          </mat-form-field>
+       
+        <mat-form-field  appearance="fill">
+            <mat-label>Link</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="" name="link" ngModel required="true">
+          </mat-form-field>
+       
+        <mat-form-field  appearance="fill">
+            <mat-label>Thumbnail</mat-label>
+            <input matInput placeholder="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" value="" name="thumbnail" ngModel>
+        </mat-form-field>
+       
+        <mat-form-field  appearance="fill">
+            <mat-label>Color</mat-label>
+            <input  type="color" matInput  value="#3c3c3c" name="color" ngModel required="true">
+          </mat-form-field>
+        <mat-form-field  appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea  matInput placeholder="Ex. Pizza" value="" ngModel name="description"></textarea>
+          </mat-form-field>
+          
+          <mat-form-field  appearance="fill">
+            <mat-label>Tags</mat-label>
+            <input matInput placeholder="search,engine,wallet,film" value="" name="tags" ngModel>
+          </mat-form-field>
+       
+        <button mat-raised-button color="primary" (click)="addBookmark(heroForm)">Add</button>
+       
+
+    </form>
+</div>
